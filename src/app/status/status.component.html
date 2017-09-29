@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <button (click)="goBack()">Back</button>
+    <table datatable class="table row-border hover" *ngIf="this.temp_var">
+      <thead>
+      <tr>
+        <th>Instance</th>
+        <th>Database</th>
+        <th>Last applied version</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of this.data.history">
+        <td>{{item.version}}</td>
+        <td>{{item.state}}</td>
+        <td>{{item.script}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
