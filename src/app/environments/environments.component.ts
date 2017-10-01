@@ -9,7 +9,7 @@
  * terms of the license agreement you entered with ACI Worldwide Inc.         *
  ******************************************************************************/
 
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-environments',

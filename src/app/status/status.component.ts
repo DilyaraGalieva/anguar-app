@@ -49,12 +49,13 @@ export class StatusComponent implements OnInit {
           this.dbinfo.database = params['database'];
         }
       );
-    this.http.get('http://localhost:8090/getStatusTree?environment='
+    /* this.http.get('http://localhost:8090/getStatusTree?environment='
       + this.dbinfo.environment
       + '&instanceName='
       + this.dbinfo.instance
       + '&databaseName='
-      + this.dbinfo.database)
+      + this.dbinfo.database) */
+    this.http.get('assets/data/scripts.json')
       .subscribe((res: Response) => {
         this.data = res;
         console.log(this.data);

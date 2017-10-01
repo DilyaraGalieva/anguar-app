@@ -23,7 +23,8 @@ export class DataComponent implements OnInit {
   public temp_var: Object = false;
   constructor(private http: HttpClient) {}
   ngOnInit(): void {
-    this.http.get('http://localhost:8090/getStatus').subscribe((res: Response) => {
+    // this.http.get('http://localhost:8090/getStatus').subscribe((res: Response) => {
+    this.http.get('assets/data/marsmainversions.json').subscribe((res: Response) => {
       this.data = res;
       console.log(this.data);
       this.temp_var = true;

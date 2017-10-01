@@ -1,0 +1,82 @@
+{"statuses":[
+  {
+    "instance": "MARSMAIN",
+    "database": "opay_lk",
+    "lastversion": "7.0.6.1"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "opay_up",
+    "lastversion": "8.2.9.0"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "opay_trans",
+    "lastversion": "7.0.6.1"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "arcx",
+    "lastversion": "8.2.9.0"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "opay_lk",
+    "lastversion": "7.0.6.1"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "Transactions",
+    "lastversion": "8.2.9.0"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "opay_lk",
+    "lastversion": "7.0.6.1"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "Transactions",
+    "lastversion": "8.2.9.0"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "opay_lk",
+    "lastversion": "7.0.6.1"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "Transactions",
+    "lastversion": "8.2.9.0"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "opay_lk",
+    "lastversion": "7.0.6.1"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "Transactions",
+    "lastversion": "8.2.9.0"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "opay_lk",
+    "lastversion": "7.0.6.1"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "Transactions",
+    "lastversion": "8.2.9.0"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "opay_lk",
+    "lastversion": "7.0.6.1"
+  },
+  {
+    "instance": "MARSMAIN",
+    "database": "users",
+    "lastversion": "8.2.9.0"
+  }
+]}

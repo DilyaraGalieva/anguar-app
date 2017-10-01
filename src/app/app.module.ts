@@ -22,7 +22,7 @@ import { DataComponent } from './data/data.component';
 import { StatusComponent } from './status/status.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
-import { MaterialModule } from '@angular/material';
+import {ActiveclassDirective} from '../directives/activeclass.directive';
 
 
 @NgModule({
@@ -33,15 +33,15 @@ import { MaterialModule } from '@angular/material';
     EnvironmentsComponent,
     DataComponent,
     StatusComponent,
-    ErrorpageComponent
+    ErrorpageComponent,
+    ActiveclassDirective
   ],
   imports: [
     BrowserModule,
     DataTablesModule,
     HttpClientModule,
     CommonModule,
-    AppRoutingModule,
-    MaterialModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
