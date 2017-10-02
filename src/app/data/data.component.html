@@ -1,19 +1,38 @@
 <div class="container">
   <div class="row">
-    <table datatable class="table row-border hover" *ngIf="this.temp_var">
+    <table datatable data-page-length='25' width="100%"
+           class="table table-bordered table-hover row-border hover" *ngIf="this.temp_var">
       <thead>
-      <tr>
-        <th>Instance</th>
-        <th>Database</th>
-        <th>Last applied version</th>
-      </tr>
+        <tr>
+          <th [hidden]="this.environments.length==0">Instance</th>
+          <th [hidden]="this.environments.length==0">Database</th>
+          <th [hidden]="!this.environments.includes('UAT-MARS')">UAT-MARS</th>
+          <th [hidden]="!this.environments.includes('UAT-EARTH')">UAT-EARTH</th>
+          <th [hidden]="!this.environments.includes('EpicQE-PC1')">EpicQE-PC1</th>
+          <th [hidden]="!this.environments.includes('EpicQE-PC2')">EpicQE-PC2</th>
+          <th [hidden]="!this.environments.includes('EpicQE-PC3')">EpicQE-PC3</th>
+          <th [hidden]="!this.environments.includes('NFR-PERF')">NFR-PERF</th>
+          <th [hidden]="!this.environments.includes('NFR-SEC')">NFR-SEC</th>
+        </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let item of this.data.statuses">
-        <td>{{item.instance}}</td>
-        <td>{{item.database}}</td>
-        <td><a [routerLink]="['status', 'mars', item.instance, item.database]"
+      <tr *ngFor="let item of this.data_mars.statuses; let i = index" [attr.data-index]="i">
+        <td [hidden]="this.environments.length==0">{{this.data_earth.statuses[i].instance}}</td>
+        <td [hidden]="this.environments.length==0">{{item.database}}</td>
+        <td [hidden]="!this.environments.includes('UAT-MARS')"><a [routerLink]="['status', 'mars', item.instance, item.database]"
                href="#">{{item.lastversion}}</a></td>
+        <td [hidden]="!this.environments.includes('UAT-EARTH')"><a [routerLink]="['status', 'earth', this.data_earth.statuses[i].instance, this.data_earth.statuses[i].database]"
+               href="#">{{this.data_earth.statuses[i].lastversion}}</a></td>
+        <td [hidden]="!this.environments.includes('EpicQE-PC1')"><a [routerLink]="['status', 'epicqe1', this.data_epicqe1.statuses[i].instance, this.data_epicqe1.statuses[i].database]"
+               href="#">{{this.data_epicqe1.statuses[i].lastversion}}</a></td>
+        <td [hidden]="!this.environments.includes('EpicQE-PC2')"><a [routerLink]="['status', 'epicqe2', this.data_epicqe2.statuses[i].instance, this.data_epicqe2.statuses[i].database]"
+               href="#">{{this.data_epicqe2.statuses[i].lastversion}}</a></td>
+        <td [hidden]="!this.environments.includes('EpicQE-PC3')"><a [routerLink]="['status', 'epicqe3', this.data_epicqe3.statuses[i].instance, this.data_epicqe3.statuses[i].database]"
+               href="#">{{this.data_epicqe3.statuses[i].lastversion}}</a></td>
+        <td [hidden]="!this.environments.includes('NFR-PERF')"><a [routerLink]="['status', 'perf', this.data_perf.statuses[i].instance, this.data_perf.statuses[i].database]"
+               href="#">{{this.data_perf.statuses[i].lastversion}}</a></td>
+        <td [hidden]="!this.environments.includes('NFR-SEC')"><a [routerLink]="['status', 'sec', this.data_sec.statuses[i].instance, this.data_sec.statuses[i].database]"
+                                                              href="#">{{this.data_sec.statuses[i].lastversion}}</a></td>
       </tr>
       </tbody>
     </table>

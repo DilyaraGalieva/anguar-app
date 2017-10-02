@@ -2,17 +2,22 @@
   <div class="clearfix">
     <div class="col-md-12">
       <div class="col-md-8 col-sm-6 col-xs-12">
-        <h1>Choose environments for comparison <br /></h1>
+        <h1></h1>
         <ul class="nav nav-pills">
-          <li role="presentation" appActive><a href="#">EpicQE-PC1</a></li>
-          <li role="presentation" appActive><a href="#">EpicQE-PC2</a></li>
-          <li role="presentation" appActive><a href="#">EpicQE-PC3</a></li>
-          <li role="presentation" appActive><a href="#">MARS</a></li>
-          <li role="presentation" appActive><a href="#">EARTH</a></li>
-          <li role="presentation" appActive><a href="#">PERFORMANCE</a></li>
-          <li role="presentation" appActive><a href="#">SECURITY</a></li>
+          <li appActive role="presentation"><a (click)="onEnvironmentClick('UAT-MARS')" href="#">UAT-MARS</a></li>
+          <li appActive role="presentation"><a (click)="onEnvironmentClick('UAT-EARTH')" href="#">UAT-EARTH</a></li>
+          <li appActive role="presentation"><a (click)="onEnvironmentClick('EpicQE-PC1')" href="#">EpicQE-PC1</a></li>
+          <li appActive role="presentation"><a (click)="onEnvironmentClick('EpicQE-PC2')" href="#">EpicQE-PC2</a></li>
+          <li appActive role="presentation"><a (click)="onEnvironmentClick('EpicQE-PC3')" href="#">EpicQE-PC3</a></li>
+          <li appActive role="presentation"><a (click)="onEnvironmentClick('NFR-PERF')" href="#">NFR-PERF</a></li>
+          <li appActive role="presentation"><a (click)="onEnvironmentClick('NFR-SEC')" href="#">NFR-SEC</a></li>
         </ul>
       </div>
     </div>
+  </div>
+</div>
+<div class="row">
+  <div class="colxs-12 col-sm-10 col-md8 col-sm-offset-1">
+    <router-outlet></router-outlet>
   </div>
 </div>

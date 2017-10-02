@@ -1,0 +1,41 @@
+.table>thead>tr>th {
+  border-color: rgba(41, 41, 41, 0.71);
+}
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+  border-color: rgba(41, 41, 41, 0.71);
+}
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+  border-color: rgba(41, 41, 41, 0.71);
+}
+
+.table-bordered {
+  border-color: rgba(41, 41, 41, 0.71);
+}
+
+.Success {
+  background-color: rgba(166, 235, 94, 0.85);
+}
+
+.Ignored {
+  background-color: rgba(254, 83, 55, 0.74);
+}
+
+.Missing, .CHANGED {
+  background-color: #fafb27;
+}
+
+.Pending {
+  background-color: #e8b9e1;
+}
+
+.OutOrdr {
+  background-color: rgba(211, 128, 47, 0.84);
+}
+
+.Baselin, .Baseln {
+  background-color: rgb(175,217,238);
+}
+
+.top-buffer { margin-top:20px; }

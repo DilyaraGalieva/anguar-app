@@ -9,7 +9,8 @@
  * terms of the license agreement you entered with ACI Worldwide Inc.         *
  ******************************************************************************/
 
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit } from '@angular/core';
+import {DataService} from '../services/data.service';
 
 @Component({
   selector: 'app-environments',
@@ -17,10 +18,20 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./environments.component.css']
 })
 export class EnvironmentsComponent implements OnInit {
+  environments: Array<string>;
+  constructor(private dataService: DataService) { }
 
-  constructor() { }
+  getEnvironments(): void {
+    this.dataService.getEnvironments().then(environments => this.environments = environments);
+  }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.getEnvironments();
+  }
+
+  onEnvironmentClick(env) {
+    this.dataService.setEnvironment(env);
+    this.getEnvironments();
   }
 
 }

@@ -22,7 +22,7 @@ import { DataComponent } from './data/data.component';
 import { StatusComponent } from './status/status.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
-import {ActiveclassDirective} from '../directives/activeclass.directive';
+import {ActiveclassDirective} from './directives/activeclass.directive';
 
 
 @NgModule({

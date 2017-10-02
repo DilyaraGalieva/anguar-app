@@ -10,9 +10,9 @@
  ******************************************************************************/
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {DataComponent} from './data/data.component';
 import {StatusComponent} from './status/status.component';
 import {ErrorpageComponent} from './errorpage/errorpage.component';
+import {DataComponent} from './data/data.component';
 
 const appRoutes: Routes = [
   {path: '', component: DataComponent},

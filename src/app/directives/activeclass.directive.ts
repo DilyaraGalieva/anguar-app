@@ -8,16 +8,15 @@
  * Confidential Information and shall use it only in accordance with the      *
  * terms of the license agreement you entered with ACI Worldwide Inc.         *
  ******************************************************************************/
+import {Directive, HostBinding, HostListener, Input} from '@angular/core';
 
-import 'rxjs/Rx';
-import { Component } from '@angular/core';
-import {DataService} from './services/data.service';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: [DataService]
+@Directive({
+  selector: '[appActive]'
 })
-export class AppComponent {
+export class ActiveclassDirective {
+  @Input() @HostBinding('class.active') isActive = false;
+
+  @HostListener('click') makeActive() {
+    this.isActive = !this.isActive;
+  }
 }

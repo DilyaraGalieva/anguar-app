@@ -1,0 +1,15 @@
+.table>thead>tr>th {
+  border-color: rgba(41, 41, 41, 0.71);
+}
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+  border-color: rgba(41, 41, 41, 0.71);
+}
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+  border-color: rgba(41, 41, 41, 0.71);
+}
+
+.table-bordered {
+  border-color: rgba(41, 41, 41, 0.71);
+}

@@ -15,6 +15,7 @@ import {HttpClient} from '@angular/common/http';
 import 'rxjs/Rx';
 import {Subscription} from 'rxjs/Subscription';
 import {Location} from '@angular/common';
+import {DataService} from '../services/data.service';
 
 @Component({
   selector: 'app-status',
@@ -27,13 +28,25 @@ export class StatusComponent implements OnInit {
   paramSubscription: Subscription;
   public data: Object;
   public temp_var: Object = false;
+  environments: any;
+  private alive = true;
 
+  getEnvironments(): void {
+    this.dataService.getEnvironments().then(environments => this.environments = environments);
+  }
 
   constructor(
     private http: HttpClient,
     private route: ActivatedRoute,
-    private location: Location
-  ) {}
+    private location: Location,
+    private dataService: DataService
+  ) {
+    dataService.environments$.takeWhile(() => this.alive).subscribe(
+      environments => {
+        this.getEnvironments();
+        console.log(this.environments);
+      });
+  }
 
   ngOnInit(): void {
     this.dbinfo = {
@@ -49,16 +62,14 @@ export class StatusComponent implements OnInit {
           this.dbinfo.database = params['database'];
         }
       );
-    /* this.http.get('http://localhost:8090/getStatusTree?environment='
+    this.http.get('http://localhost:8090/statuses/getStatusTree?environment='
       + this.dbinfo.environment
       + '&instanceName='
       + this.dbinfo.instance
       + '&databaseName='
-      + this.dbinfo.database) */
-    this.http.get('assets/data/scripts.json')
+      + this.dbinfo.database)
       .subscribe((res: Response) => {
         this.data = res;
-        console.log(this.data);
         this.temp_var = true;
       });
   }
